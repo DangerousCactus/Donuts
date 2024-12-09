@@ -15,7 +15,7 @@ namespace Donuts.Patches
         protected override MethodBase GetTargetMethod()
         {
             Type baseGameType = typeof(BaseLocalGame<EftGamePlayerOwner>);
-            return baseGameType.GetMethod("vmethod_4", BindingFlags.Public | BindingFlags.Instance);
+            return baseGameType.GetMethod("vmethod_5", BindingFlags.Public | BindingFlags.Instance);
         }
 
         [PatchPostfix]
@@ -27,6 +27,14 @@ namespace Donuts.Patches
             }
 
             localGameObj = __instance;
+            
+            Logger.LogDebug("Bot Spawning Check");
+
+            if (DonutComponent.gameWorld == null)
+            {
+                Logger.LogDebug("Game World is null, returning from Patch");
+                return;
+            }
 
             if(DonutComponent.IsBotSpawningEnabled)
             {

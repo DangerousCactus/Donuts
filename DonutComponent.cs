@@ -134,7 +134,7 @@ namespace Donuts
                 methodCache[methodInfo.Name] = methodInfo;
             }
 
-            methodInfo = AccessTools.Method(typeof(BotSpawner), "method_10");
+            methodInfo = AccessTools.Method(typeof(BotSpawner), "method_11");
             if (methodInfo != null)
             {
                 methodCache[methodInfo.Name] = methodInfo;
@@ -216,7 +216,7 @@ namespace Donuts
             ResetPlayerList();
         }
 
-        private void BeingHitBattleCoolDown(DamageInfo info, EBodyPart part, float arg3)
+        private void BeingHitBattleCoolDown(DamageInfoStruct info, EBodyPart part, float arg3)
         {
             switch (info.DamageType)
             {

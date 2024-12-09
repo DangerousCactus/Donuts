@@ -10,7 +10,7 @@ using HarmonyLib;
 using UnityEngine;
 using static Donuts.DefaultPluginVars;
 using static Donuts.DonutComponent;
-using IProfileData = GClass592;
+using IProfileData = GClass652;
 using Random = System.Random;
 
 #pragma warning disable IDE0007, IDE0044

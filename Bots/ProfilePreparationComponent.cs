@@ -12,7 +12,7 @@ using EFT;
 using HarmonyLib;
 using Newtonsoft.Json;
 using UnityEngine;
-using IProfileData = GClass592;
+using IProfileData = GClass652;
 using System.Threading;
 
 #pragma warning disable IDE0007, CS4014
@@ -235,7 +235,7 @@ namespace Donuts
             }
         }
 
-        private void Mainplayer_BeingHitAction(DamageInfo arg1, EBodyPart arg2, float arg3)
+        private void Mainplayer_BeingHitAction(DamageInfoStruct arg1, EBodyPart arg2, float arg3)
         {
             switch (arg1.DamageType)
             {
